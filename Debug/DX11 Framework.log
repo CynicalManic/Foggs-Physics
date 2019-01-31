@@ -1,0 +1,3 @@
+﻿  Vector3D.cpp
+c:\users\c016193g.student\documents\foggs\foggs-physics\vector3d.cpp(90): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  DX11 Framework.vcxproj -> C:\Users\c016193g.STUDENT\Documents\Foggs\Foggs-Physics\Debug\DX11 Framework.exe
