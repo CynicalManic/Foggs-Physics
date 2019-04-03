@@ -2,24 +2,12 @@
 
 GameObject::GameObject(string type, Geometry geometry, Material material) : _geometry(geometry), _type(type), _material(material)
 {
-	_parent = nullptr;
-	_position = XMFLOAT3();
-	_rotation = XMFLOAT3();
-	_scale = XMFLOAT3(1.0f, 1.0f, 1.0f);
-
 	_textureRV = nullptr;
-	
-	Vector3D vector1;
-	Vector3D vector2 = {1.0f, 1.0f, 1.0f};
-	vector2 * 2;
+}
 
-	Vector3D vector3 = vector1 + vector2;
-
-	float test = vector2.GetMagnitude();
-	vector2.Normalize();
-	test = vector2.GetMagnitude();
-
-
+GameObject::GameObject(string type, Appearance * appearance, Transform* transform, ParticleModel * particleModel): _appearance(appearance), _transform(transform), _particleModel(particleModel)
+{
+	_parent = nullptr;
 }
 
 GameObject::~GameObject()
@@ -45,9 +33,5 @@ void GameObject::Draw(ID3D11DeviceContext * pImmediateContext)
 {
 	// NOTE: We are assuming that the constant buffers and all other draw setup has already taken place
 
-	// Set vertex and index buffers
-	pImmediateContext->IASetVertexBuffers(0, 1, &_geometry.vertexBuffer, &_geometry.vertexBufferStride, &_geometry.vertexBufferOffset);
-	pImmediateContext->IASetIndexBuffer(_geometry.indexBuffer, DXGI_FORMAT_R16_UINT, 0);
 
-	pImmediateContext->DrawIndexed(_geometry.numberOfIndices, 0, 0);
 }

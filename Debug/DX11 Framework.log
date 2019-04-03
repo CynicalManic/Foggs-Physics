@@ -1,3 +1,8 @@
-﻿  Vector3D.cpp
-c:\users\c016193g.student\documents\foggs\foggs-physics\vector3d.cpp(90): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  DX11 Framework.vcxproj -> C:\Users\c016193g.STUDENT\Documents\Foggs\Foggs-Physics\Debug\DX11 Framework.exe
+﻿  Application.cpp
+  Main.cpp
+  GameObject.cpp
+e:\github work\foggs-physics\gameobject.cpp(17): warning C4100: 't': unreferenced formal parameter
+  Transform.cpp
+  Generating Code...
+Application.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  DX11 Framework.vcxproj -> E:\Github Work\Foggs-Physics\Debug\DX11 Framework.exe
